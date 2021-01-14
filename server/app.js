@@ -4,6 +4,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const models = require('./models');
 
+/* I began this last night, had some tech issues */
+
 const indexRouter = require('./routes/index');
 const tablesRouter = require('./routes/tables');
 
@@ -26,7 +28,7 @@ models.sequelize.sync().then(()=>{
 
 // Start the server
 app.listen(PORT, () => {
-    console.log(`🚀 Server ready ! at ${PORT}/graphiql to run queries!`);
+    console.log(`🚀 Server ready ! at ${PORT} !`);
 
     console.log(process.env.NODE_ENV);
 });
